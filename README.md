@@ -7,60 +7,96 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Captura de tela da pagina de produtos](assets/Produtos.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instalação
 
-## Learning Laravel
+Siga as etapas abaixo para baixar e executar o projeto localmente:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+1. Clone este repositório para o seu computador: 
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+git clone URL_DO_REPOSITORIO
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. Navegue para o diretório do projeto clonado:
 
-## Laravel Sponsors
+cd nome-do-projeto
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. Instale as dependências do Laravel:
 
-### Premium Partners
+composer install
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+4. Copie o arquivo .env.example e renomeie para .env:
 
-## Contributing
+cp .env.example .env
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Configure o arquivo .env com as informações do seu ambiente, como as credenciais do banco de dados.
 
-## Code of Conduct
+6. Gere a chave de criptografia do Laravel:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+php artisan key:generate
 
-## Security Vulnerabilities
+7. Instale as dependências do Node.js:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+npm install
 
-## License
+8. Execute as migrações do banco de dados:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+php artisan migrate
+
+9. Inicie o servidor de desenvolvimento do Laravel Sail:
+
+./vendor/bin/sail up
+
+10. O projeto estará disponível em http://localhost:8000.
+
+...
+
+<h2>Utilizando a Aplicação</h2>
+
+
+![Captura de tela da pagina para adicionar um novo produto](assets/AdicionarProduto.png)
+
+
+<h3>Criando um novo produto</h3>
+
+1. Na página inicial, clique no botão "Novo Produto" para abrir o formulário de criação de produto.
+2. Preencha os campos obrigatórios, como nome, descrição e preço.
+3. Selecione as opções desejadas e adicione as informações adicionais, se necessário.
+4. Clique no botão "Salvar" para criar o produto.
+
+<h3>Pesquisando produtos</h3>
+
+1. No campo de pesquisa na barra de navegação, digite o nome ou parte do nome do produto desejado.
+2. Os resultados da pesquisa serão atualizados automaticamente conforme você digita.
+3. Clique no produto desejado para visualizar os detalhes.
+
+<h3>Atualizando um produto</h3>
+
+1. Na página de detalhes do produto, clique no botão "Editar".
+2. Faça as alterações desejadas nos campos correspondentes.
+3. Clique no botão "Salvar" para atualizar as informações do produto.
+
+<h3>Configuração do Banco de Dados</h3>
+
+1. Abra o arquivo .env e encontre a seção de configuração do banco de dados.
+2. Preencha as informações de conexão com o banco de dados, como o nome do banco, usuário e senha.
+3. Salve as alterações no arquivo .env.
+
+Abra o arquivo .env e localize as configurações de autenticação.
+Defina as configurações de autenticação, como a chave do aplicativo e as opções de driver.
+Execute as migrações do banco de dados para criar as tabelas necessárias para autenticação.
+
+<h3>Contato</h3>
+
+Para contato, ou alguma dúvida segue meu e-mail: bgferreira0@gmail.com
+
+<h3>Desafio vaga Full Stack</h3>
+
+De inicio não tinha conhecimento sobre Laravel nem sobre React, após estudar as linguagens e frameworks, realizei alguns testes e dediquei um bom tempo para aprender essas tecnologias, e ainda vou continuar estudando, como houve muita dificuldade no processo de criação do Frontend acabei utilizando do html, css, javascript básico, e bootstrap fugindo do requsiito "Criar uma aplicação SPA com React.js 18 e typescript", mas o Backend foi possível por meio de buscas na internet até conseguir criar uma api rest
+com laravel 10.
+
+
+
+
